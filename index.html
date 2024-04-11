@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="login.js"></script>
+<body>
+    <div>
+        <form onsubmit="login(event)">
+          <h3 style="text-align: center; font-size: 50px; text-decoration: underline;">Login</h3>
+          <div class="formflex">
+            <input type="text" id="username" placeholder="User Name" required><br>
+          <input type="password" id="password" placeholder="Password" required><br>
+          <button type="submit">SignIn</button>
+          </div>
+        </form>
+      </div>
+</body>
+<style>
+    body{
+        width: 100%;
+  height: 100%;
+  --color: #E1E1E1;
+  background-color: #F3F3F3;
+  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+      linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+  background-size: 55px 55px;
+    }
+    input,button{
+      padding: 7px;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+    }
+    button{
+        width: 10%;
+        transition: width 0.5s;
+        background-color: aquamarine;
+    }
+    button:hover{
+        width: 15%;
+    }
+    .formflex{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: center;
+    margin-top: 100px;
+  }
+</style>
+</html>

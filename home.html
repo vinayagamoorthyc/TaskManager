@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+<h1 style="text-align: center;">Task Manager</h1><hr>
+  <div class="flex">
+    <div>
+      <form action="#" onsubmit="create()">
+        <h3 style="text-align: center;">Create Tasks</h3>
+        <div class="formflex">
+          <input type="text" id="category" placeholder="Category"><br>
+        <input type="text" id="sub_category" placeholder="Sub-Category"><br>
+        <input type="text" id="task" placeholder="Task"><br>
+        <input type="submit" value="Create"></input>
+        </div>
+      </form>
+    </div>
+    <div>
+      <div id="time">00:00:00 secs</div><br>
+      <button onclick="startduration()" id="start">Start</button>
+      <button onclick="stopduration()">Stop</button><br>
+    </div>  
+  </div>
+  <br>
+  <hr>
+
+    <div class="filter">
+        <label for="filter">Select Category:</label>
+        <select id="filter">
+            <option value="all">All</option>
+            <option value="Work">Work</option>
+            <option value="Personal">Personal</option>
+        </select>
+    </div>
+    <hr>
+        
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Sub_Category</th>
+                <th>Duration</th>
+                <th>Task</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+    </table>
+</body>
+<style>
+  .flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .formflex{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  #time{
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    text-align: center;
+    padding: 7px;
+  }
+#data-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#data-table th {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+}
+
+#data-table td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
+
+.filter{
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: right;
+}
+    .dropdown-container {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    select {
+      padding: 5px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      outline: none;
+    }
+
+    select:focus {
+      border-color: #007bff;
+    }
+
+    input,button{
+      padding: 5px;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+      border: none;
+      border-radius: 5px;
+    }
+</style>
+<script src="index.js"></script>
+</html>
